@@ -1,0 +1,12 @@
+create database details;
+
+create table countries(
+
+country_id varchar(2),
+country_name varchar(40),
+region_id decimal(10,0),
+
+check(country_name in ('italy','india','china'))
+);
+
+create table country_new as select * from countries
